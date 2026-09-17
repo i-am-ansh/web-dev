@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Book Catalogue</title>
+
+    <style>
+        body {
+            background-color: white;
+            font-family: Arial;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .catalogue {
+            width: 90%;
+            margin: 30px auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #eeeeee;
+        }
+
+        button {
+            background-color: white;
+            border: 1px solid black;
+            padding: 7px 15px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #eeeeee;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Online Book Store</h1>
+
+    <div class="catalogue">
+
+        <h2>Book Catalogue</h2>
+
+        <table>
+
+            <tr>
+                <th>S.No.</th>
+                <th>Book Name</th>
+                <th>Author</th>
+                <th>Category</th>
+                <th>Price</th>
+                <th>Action</th>
+            </tr>
+
+            <tr>
+                <td>1</td>
+                <td>Web Development</td>
+                <td>John Smith</td>
+                <td>Programming</td>
+                <td>Rs. 450</td>
+                <td>
+                    <button onclick="addBook('Web Development')">
+                        Add to Cart
+                    </button>
+                </td>
+            </tr>
+
+            <tr>
+                <td>2</td>
+                <td>Java Programming</td>
+                <td>James Gosling</td>
+                <td>Programming</td>
+                <td>Rs. 550</td>
+                <td>
+                    <button onclick="addBook('Java Programming')">
+                        Add to Cart
+                    </button>
+                </td>
+            </tr>
+
+            <tr>
+                <td>3</td>
+                <td>Python Basics</td>
+                <td>Mark Lutz</td>
+                <td>Programming</td>
+                <td>Rs. 600</td>
+                <td>
+                    <button onclick="addBook('Python Basics')">
+                        Add to Cart
+                    </button>
+                </td>
+            </tr>
+
+            <tr>
+                <td>4</td>
+                <td>Data Structures</td>
+                <td>Robert Lafore</td>
+                <td>Computer Science</td>
+                <td>Rs. 500</td>
+                <td>
+                    <button onclick="addBook('Data Structures')">
+                        Add to Cart
+                    </button>
+                </td>
+            </tr>
+
+            <tr>
+                <td>5</td>
+                <td>Database Systems</td>
+                <td>C. J. Date</td>
+                <td>Database</td>
+                <td>Rs. 650</td>
+                <td>
+                    <button onclick="addBook('Database Systems')">
+                        Add to Cart
+                    </button>
+                </td>
+            </tr>
+
+            <tr>
+                <td>6</td>
+                <td>Computer Networks</td>
+                <td>Andrew Tanenbaum</td>
+                <td>Networking</td>
+                <td>Rs. 700</td>
+                <td>
+                    <button onclick="addBook('Computer Networks')">
+                        Add to Cart
+                    </button>
+                </td>
+            </tr>
+
+        </table>
+
+    </div>
+
+    <script>
+
+        function addBook(book) {
+
+            alert(book + " added to cart!");
+
+        }
+
+    </script>
+
+</body>
+</html>
