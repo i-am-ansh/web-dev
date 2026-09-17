@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Book Store Login</title>
+
+    <style>
+        body {
+            background-color: white;
+            font-family: Arial;
+        }
+
+        .login {
+            width: 300px;
+            margin: 100px auto;
+            padding: 25px;
+            border: 1px solid black;
+            text-align: center;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+        }
+
+        input {
+            width: 90%;
+            padding: 8px;
+            margin: 10px;
+        }
+
+        button {
+            padding: 8px 25px;
+            background-color: white;
+            border: 1px solid black;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #eeeeee;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="login">
+
+        <h2>Online Book Store</h2>
+        <h3>Login</h3>
+
+        <form onsubmit="loginUser(); return false;">
+
+            <input type="text" id="username"
+                   placeholder="Enter Username" required>
+
+            <input type="password" id="password"
+                   placeholder="Enter Password" required>
+
+            <br>
+
+            <button type="submit">Login</button>
+
+        </form>
+
+    </div>
+
+    <script>
+
+        function loginUser() {
+
+            var username =
+                document.getElementById("username").value;
+
+            var password =
+                document.getElementById("password").value;
+
+            if (username == "" || password == "") {
+                alert("Please enter username and password");
+            }
+            else {
+                alert("Login Successful! Welcome " + username);
+            }
+
+        }
+
+    </script>
+
+</body>
+</html>
