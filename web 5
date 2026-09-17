@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Book Store - Cart</title>
+
+    <style>
+        body {
+            background-color: white;
+            font-family: Arial;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .cart {
+            width: 80%;
+            margin: 30px auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            border: 1px solid black;
+            padding: 12px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #eeeeee;
+        }
+
+        button {
+            padding: 7px 15px;
+            background-color: white;
+            border: 1px solid black;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #eeeeee;
+        }
+
+        .total {
+            text-align: right;
+            margin-top: 20px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Online Book Store</h1>
+
+    <div class="cart">
+
+        <h2>My Cart</h2>
+
+        <table>
+            <tr>
+                <th>Book Name</th>
+                <th>Author</th>
+                <th>Price</th>
+                <th>Quantity</th>
+                <th>Action</th>
+            </tr>
+
+            <tr>
+                <td>Web Development</td>
+                <td>John Smith</td>
+                <td>Rs. 450</td>
+                <td>1</td>
+                <td>
+                    <button onclick="removeBook(this)">
+                        Remove
+                    </button>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Java Programming</td>
+                <td>James Gosling</td>
+                <td>Rs. 550</td>
+                <td>1</td>
+                <td>
+                    <button onclick="removeBook(this)">
+                        Remove
+                    </button>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Python Basics</td>
+                <td>Mark Lutz</td>
+                <td>Rs. 600</td>
+                <td>2</td>
+                <td>
+                    <button onclick="removeBook(this)">
+                        Remove
+                    </button>
+                </td>
+            </tr>
+        </table>
+
+        <div class="total">
+            <b>Total: Rs. 2200</b>
+            <br><br>
+
+            <button onclick="checkout()">
+                Checkout
+            </button>
+        </div>
+
+    </div>
+
+    <script>
+
+        function removeBook(button) {
+            button.parentElement.parentElement.remove();
+            alert("Book removed from cart");
+        }
+
+        function checkout() {
+            alert("Thank you for shopping!");
+        }
+
+    </script>
+
+</body>
+</html>
