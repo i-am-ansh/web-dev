@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Online Book Store</title>
+
+<style>
+body {
+    font-family: Arial;
+    margin: 0;
+    background: white;
+}
+header {
+    text-align: center;
+    padding: 20px;
+    border-bottom: 1px solid black;
+}
+nav {
+    text-align: center;
+    padding: 15px;
+    border-bottom: 1px solid black;
+}
+nav button {
+    background: white;
+    border: 1px solid black;
+    padding: 8px 20px;
+    margin: 5px;
+}
+nav button:hover {
+    background: #eee;
+}
+.page {
+    display: none;
+    text-align: center;
+    padding: 30px;
+    min-height: 400px;
+}
+#home {
+    display: block;
+}
+.homebox {
+    border: 1px solid black;
+    padding: 30px;
+    width: 70%;
+    margin: auto;
+}
+.login {
+    border: 1px solid black;
+    width: 300px;
+    margin: auto;
+    padding: 25px;
+}
+.login input {
+    padding: 8px;
+    margin: 8px;
+}
+.login input[type="submit"] {
+    background: white;
+    border: 1px solid black;
+    padding: 8px 25px;
+}
+.book {
+    border: 1px solid black;
+    display: inline-block;
+    width: 190px;
+    margin: 10px;
+    padding: 15px;
+}
+.book button {
+    background: white;
+    border: 1px solid black;
+    padding: 8px 15px;
+}
+footer {
+    text-align: center;
+    border-top: 1px solid black;
+    padding: 15px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>Online Book Store</h1>
+<p>Welcome to our Book Store</p>
+</header>
+
+<nav>
+<button onclick="showPage('home')">Home</button>
+<button onclick="showPage('login')">Login</button>
+<button onclick="showPage('catalogue')">Catalogue</button>
+</nav>
+
+<div id="home" class="page">
+<div class="homebox">
+<h2>Home Page</h2>
+<p>Welcome to Online Book Store.</p>
+<p>Here you can find different types of books.</p>
+<p>We provide books at reasonable prices.</p>
+<p>Visit our catalogue to see our books.</p>
+</div>
+</div>
+
+<div id="login" class="page">
+<div class="login">
+<h2>Login Page</h2>
+
+<form onsubmit="login(); return false;">
+
+<label>Username:</label>
+<input type="text" id="username" required>
+<br>
+
+<label>Password:</label>
+<input type="password" id="password" required>
+<br>
+
+<input type="submit" value="Login">
+
+</form>
+</div>
+</div>
+
+<div id="catalogue" class="page">
+
+<h2>Book Catalogue</h2>
+
+<div class="book">
+<h3>Web Development</h3>
+<p>Author: John Smith</p>
+<p>Price: Rs. 450</p>
+<button onclick="addBook('Web Development')">Add to Cart</button>
+</div>
+
+<div class="book">
+<h3>Java Programming</h3>
+<p>Author: James Gosling</p>
+<p>Price: Rs. 550</p>
+<button onclick="addBook('Java Programming')">Add to Cart</button>
+</div>
+
+<div class="book">
+<h3>Python Basics</h3>
+<p>Author: Mark Lutz</p>
+<p>Price: Rs. 600</p>
+<button onclick="addBook('Python Basics')">Add to Cart</button>
+</div>
+
+<div class="book">
+<h3>Data Structures</h3>
+<p>Author: Robert Lafore</p>
+<p>Price: Rs. 500</p>
+<button onclick="addBook('Data Structures')">Add to Cart</button>
+</div>
+
+</div>
+
+<footer>
+<p>Online Book Store &copy; 2026</p>
+</footer>
+
+<script>
+
+function showPage(page) {
+    var pages = document.getElementsByClassName("page");
+
+    for (var i = 0; i < pages.length; i++) {
+        pages[i].style.display = "none";
+    }
+
+    document.getElementById(page).style.display = "block";
+}
+
+function login() {
+    var name = document.getElementById("username").value;
+    alert("Welcome " + name);
+}
+
+function addBook(book) {
+    alert(book + " added to cart");
+}
+
+</script>
+
+</body>
+</html>
